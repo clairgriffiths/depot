@@ -48,6 +48,21 @@
 		padding: 1em 2em;
 		width: 13em;
 		background: #141;
+    form, div {
+      display: inline; 
+    }
+    input {
+      font-size: small;
+    }
+    #cart {
+      font-size: smaller;
+      color: white;
+      table {
+        border-top: 1px dotted #595;
+        border-bottom: 1px dotted #595;    
+        margin-bottom: 10px;
+      }
+    }
 	
 		ul {
 			padding: 0;
@@ -61,6 +76,39 @@
 		}
 	}
 }
+
+/* FORM */
+
+.depot_form {
+  fieldset {
+    background: #fe;
+  }
+  legend {
+    color: #dfd;
+    background: #141;
+    font-family: sans-serif;
+    padding: 0.2em 1em;
+  }
+}
+
+form {
+  label {
+    width: 5em;
+    float: left;
+    text-align: right;
+    padding-top: 0.2em;
+    margin-right: 0.1em;
+    display: block;
+  }
+  select, textarea, input {
+    margin-left: 4em;
+  }
+  
+  br {
+    display: none;
+  }
+}
+
 
 
 

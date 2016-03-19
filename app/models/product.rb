@@ -1,6 +1,7 @@
 class Product < ActiveRecord::Base
 	
 	has_many :line_items
+  has_many :orders, through: :line_items
 	
 	# CALLBACKS
 	before_destroy :ensure_not_referenced_by_any_line_items
@@ -14,6 +15,10 @@ class Product < ActiveRecord::Base
 		with: %r{\.(gif|jpg|png)\Z}i,
 		message: "must be a URL for GIF, JPG or PNG image."
 		}
+  
+  def self.latest
+    Product.order(:updated_at).last
+  end
 	
 	private
 	

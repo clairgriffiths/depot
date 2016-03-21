@@ -13,6 +13,9 @@ Rails.application.configure do
   config.consider_all_requests_local       = true
 	config.action_controller.perform_caching = false
 
+  
+  
+  
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
@@ -42,4 +45,10 @@ Rails.application.configure do
   # Get rid of annoying server messages
   config.web_console.whiny_requests = false
   
+end
+
+# Added according to Rails Agile Development book
+
+Depot::Application.configure do 
+  config.action_mailer.delivery_method = :test
 end

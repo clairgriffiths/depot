@@ -1,4 +1,4 @@
-<!-- Tells the browser to replace the content of the element whose id is 'cart' with that html -->
+
 
 $('notice').hide();
 
@@ -8,9 +8,3 @@ $('#cart').html('<%= escape_javascript(render(@cart))%>');
 
 $('#current_item).css({'background-color':'#88ff88'}).animate({'background-color':'#114411'}, 1000);
 
-<!-- 
-$ = jQuery
-('cart') = find the DOM element with an id of cart
-.html = Get the HTML contents of the DOM element
-render(@cart) = replace the content of the above with this
-escape_javascript = convert the Ruby string into a Javascript-acceptable input

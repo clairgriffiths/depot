@@ -1,4 +1,6 @@
 class LineItemsController < ApplicationController
+  
+  skip_before_action :authorize, only: :create
 	
   # Saved in concerns, sets the current cart as passed through from params or creates a new one
 	include CurrentCart
